@@ -1,7 +1,8 @@
 version: '3.8'
 
 volumes:
-  npm-data: {}
+  npm-data:
+
 services:
   npm:
     build:
@@ -15,10 +16,11 @@ services:
         ipv4_address: 192.168.95.10
     ports:
       - "81:81"
+      - "85:85"
       - "443:443"
     volumes:
       - npm-data:/data
-      - npm-data/letsencrypt:/etc/letsencrypt
+      - npm-data:/etc/letsencrypt
 
 networks:
   cosmos:
