@@ -6,6 +6,3 @@ RUN mkdir -p /data
 
 # Copie les données persistantes
 COPY data/* /data/
-
-# Définit le point d'entrée par défaut
-CMD ["npm", "start"]
