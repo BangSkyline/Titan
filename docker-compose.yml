@@ -1,0 +1,25 @@
+version "3.9"
+
+volumes:
+  npm-data: {}
+services:
+  npm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: titan:V1
+    container_name: NPM
+    restart: unless-stopped
+    networks:
+      cosmos:
+        ipv4_address: 192.168.95.10
+    ports:
+      - "81:81"
+      - "443:443"
+    volumes:
+      - npm-data:/data
+      - npm-data/letsencrypt:/etc/letsencrypt
+
+networks:
+  cosmos:
+    external: true

@@ -1,0 +1,1 @@
+2025/08/14 20:03:54 [error] 233#233: *842 connect() failed (113: No route to host) while connecting to upstream, client: 192.168.95.1, server: jupiter.cosmos, request: "GET / HTTP/1.1", upstream: "http://192.168.95.30:85/", host: "jupiter.cosmos", referrer: "https://npm.cosmos/"
